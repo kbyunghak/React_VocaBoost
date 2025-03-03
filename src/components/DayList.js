@@ -1,22 +1,9 @@
-import db from "../db/data.json";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import useFetch from "../hooks/useFetch.js";
 
 export default function DayList() {
-    const [days, setDays] = useState([]);
-
-    useEffect(()=> {
-        fetch("http://localhost:3001/days")
-        .then(res => {
-            return res.json();
-        })
-        .then(data => {
-            setDays(data);
-        });        
-    }, []); // []: Runs only once initially
-            // [count]: Runs whenever 'count' changes
-            // [days]: Runs whenever 'days' changes
-            // [count, days]: Runs whenever either 'count' or 'days' changes
+    //const [days, setDays] = useState([]);
+    const days = useFetch("http://localhost:3001/days");
     
     return (
         <>
