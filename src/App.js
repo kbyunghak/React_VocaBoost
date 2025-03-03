@@ -11,11 +11,14 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <div className='App'>
-        <Header />  
-        <DayList />
-        <Day />
-      </div>
+        <div className='App'>
+          <Header />  
+          <Routes>
+            <Route path="/" element={<DayList />} />
+            <Route path="/day/:day" element={<Day />} />
+            <Route path="*" element={<EmptyPage />} />
+          </Routes>
+        </div>
       </BrowserRouter>      
     </div>
   );
