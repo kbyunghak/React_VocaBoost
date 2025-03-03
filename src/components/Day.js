@@ -7,7 +7,7 @@ export default function Day() {
     const { day } = useParams();    
     const words = useFetch('http://localhost:3001/words?day=' + day);    
     
-    if (words.length > 0) {
+    if (words.length === 0) {
         return (<EmptyPage />)        
     } else {
         return (
