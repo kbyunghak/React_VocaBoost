@@ -5,8 +5,6 @@ import Day from './components/Day';
 import EmptyPage from './components/EmptyPage';
 import CreateWords from './components/CreateWords';
 import CreateDays from './components/CreateDays'; 
-
-import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 export default function App() {

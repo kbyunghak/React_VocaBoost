@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import EmptyPage from "./EmptyPage";
 import Word from "./Word";
 import useFetch from "../hooks/useFetch.js";
 
-export default function Day() {
+export default function Day() {    
     const { day } = useParams();    
+    const maxDay = useFetch("http://localhost:3001/days").length;
     const words = useFetch('http://localhost:3001/words?day=' + day);    
     const existDay = useFetch('http://localhost:3001/days?day=' + day);    
 
@@ -12,8 +13,20 @@ export default function Day() {
         return (<EmptyPage />)        
     } else {
         return (
-            <div>
-                <h1 style={{float: 'left'}}> Day {day} </h1>
+            <div>                
+                <div className="header">     
+                    <h1> Day {day} </h1>               
+                    <div className="menu">    
+                         {/* Previous button: Navigates to the previous day, but not below day 1 */}                    
+                        <Link to={`/day/${Math.max(1, Number(day) - 1)}`} className="link">&#9665;</Link>
+                         {/* Next button: Navigates to the next day, but not above the max day */}
+                        <Link to={`/day/${Math.min(maxDay, Number(day) + 1)}`} className="link">&#9655;</Link>
+                    </div>
+                    <h2 className="btn_del">
+                        {words.length === 0 ? `There are no words for Day ${day}` : ""}
+                    </h2>               
+                </div>
+                
                 <table> 
                     <thead>
                         <tr>

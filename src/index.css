@@ -110,11 +110,16 @@ button {
 }
 
 .input_area {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px;   */
+  display: flex;
+  flex-direction: column; /* Stack label and input vertically */
+  align-items: flex-start; /* Align label with input */
+  margin-bottom: 10px; /* Add spacing between input fields */
 }
 
-.input_area label {
-  display: block;
+.input_area label {  
+  margin-bottom: 5px; /* Adds space between label and input */
+  font-weight: bold; /* Optional: makes label more readable */
   margin-bottom: 10px;
 }
 
@@ -131,6 +136,3 @@ button {
   font-size: 20px;
 }
 
-.label {
-  float: 'left';
-}
