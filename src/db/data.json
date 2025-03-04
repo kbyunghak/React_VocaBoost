@@ -1,13 +1,53 @@
-{ "days": [{"id": 1, "day": 1},
-           {"id": 2, "day": 2},
-           {"id": 3, "day": 3}],
-  "words": [{"id": 1, "day": 1, "word": "word1", "meaning": "meaning1", "isDone": false},
-            {"id": 2, "day": 1, "word": "word2", "meaning": "meaning2", "isDone": false},
-            {"id": 3, "day": 1, "word": "word3", "meaning": "meaning3", "isDone": false},
-            {"id": 4, "day": 2, "word": "word4", "meaning": "meaning4", "isDone": false},
-            {"id": 5, "day": 2, "word": "word5", "meaning": "meaning5", "isDone": false},
-            {"id": 6, "day": 2, "word": "word6", "meaning": "meaning6", "isDone": false},
-            {"id": 7, "day": 3, "word": "word7", "meaning": "meaning7", "isDone": false},
-            {"id": 8, "day": 3, "word": "word8", "meaning": "meaning8", "isDone": false},
-            {"id": 9, "day": 3, "word": "word9", "meaning": "meaning9", "isDone": false}]
+{
+  "days": [
+    {
+      "id": "1",
+      "day": 1
+    },
+    {
+      "id": "2",
+      "day": 2
+    },
+    {
+      "id": "3",
+      "day": 3
+    }
+  ],
+  "words": [
+    {
+      "id": "1",
+      "day": 1,
+      "word": "word1",
+      "meaning": "meaning1",
+      "isDone": true
+    },
+    {
+      "id": "5",
+      "day": 2,
+      "word": "word5",
+      "meaning": "meaning5",
+      "isDone": true
+    },
+    {
+      "id": "6",
+      "day": 2,
+      "word": "word6",
+      "meaning": "meaning6",
+      "isDone": false
+    },
+    {
+      "id": "7",
+      "day": 3,
+      "word": "word7",
+      "meaning": "meaning7",
+      "isDone": false
+    },
+    {
+      "id": "8",
+      "day": 3,
+      "word": "word8",
+      "meaning": "meaning8",
+      "isDone": false
+    }
+  ]
 }
