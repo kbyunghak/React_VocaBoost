@@ -8,8 +8,8 @@ export default function Header() {
                 <Link to={`/`}>VocaBoost</Link>
             </h1>
             <div className="menu">
-                <a href="#x" className="link">Add Words</a>
-                <a href="#x" className="link">Add Days</a>
+                <Link to="/create_words" className="link">Add Words</Link>
+                <Link to="/create_day" className="link">Add Days</Link>                
             </div>
         </div>
     );

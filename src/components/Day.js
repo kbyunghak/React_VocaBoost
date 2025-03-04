@@ -6,12 +6,14 @@ import useFetch from "../hooks/useFetch.js";
 export default function Day() {
     const { day } = useParams();    
     const words = useFetch('http://localhost:3001/words?day=' + day);    
-    
-    if (words.length === 0) {
+    const existDay = useFetch('http://localhost:3001/days?day=' + day);    
+
+    if (existDay.length == 0) {
         return (<EmptyPage />)        
     } else {
         return (
             <div>
+                <h1 style={{float: 'left'}}> Day {day} </h1>
                 <table> 
                     <thead>
                         <tr>
