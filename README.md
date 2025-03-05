@@ -14,6 +14,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `start json-server`
+
+npm install -g json-server
+json-server --watch src/db/data.json --port 3001
+Index:
+http://localhost:3001/
+Static files:
+Serving ./public directory if it exists
+Endpoints:
+http://localhost:3001/days
+http://localhost:3001/words
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
