@@ -1,85 +1,135 @@
-# Getting Started with Create React App
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocaBoost - Vocabulary Learning App</title>
+</head>
+<body>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>📌 VocaBoost - Vocabulary Learning App</h1>
+<p>VocaBoost is a <b>React-based vocabulary learning app</b> that helps users organize and review words efficiently.</p>
+<p>It is built using <b>JavaScript, React.js, MongoDB, and Render</b> to provide a <b>full-stack experience</b> with a dynamic backend and seamless UI.</p>
 
-## Available Scripts
+<ul>
+    <li>🚀 <b>Live Demo:</b> <a href="https://kbyunghak.github.io/React_VocaBoost/">VocaBoost on GitHub Pages</a></li>
+    <li>🔗 <b>Backend API:</b> <a href="https://voca-backend-i7hh.onrender.com/api/days">Hosted on Render</a></li>
+</ul>
 
-In the project directory, you can run:
+<hr>
 
-### `npm start`
+<h2>🛠 Tech Stack</h2>
+<ul>
+    <li><b>Frontend:</b> React.js, JavaScript</li>
+    <li><b>Backend:</b> Node.js, Express.js, MongoDB (Atlas)</li>
+    <li><b>Database:</b> MongoDB (NoSQL)</li>
+    <li><b>Hosting:</b> GitHub Pages (Frontend), Render (Backend)</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-Open [https://kbyunghak.github.io/React_VocaBoost/] to view it in your browser.
-The page will reload when you make changes.\
-![image](https://github.com/user-attachments/assets/7e12481b-0851-41a6-88cc-a25d80950d42)
-![image](https://github.com/user-attachments/assets/753469b5-8b05-4003-a1ed-634b044fd334)
+<hr>
 
-### `start json-server`
+<h2>📂 Features</h2>
+<ul>
+    <li>✅ View Vocabulary Days – Displays a list of available study days</li>
+    <li>✅ Add New Words – Users can add new words and their meanings</li>
+    <li>✅ Delete Words – Easily remove words from the database</li>
+    <li>✅ Mark Words as Learned – Toggle words as learned or not</li>
+    <li>✅ Dynamic MongoDB Storage – Data is stored and retrieved from MongoDB Atlas</li>
+    <li>✅ Full CRUD Operations – Create, Read, Update, and Delete functionality</li>
+</ul>
 
-npm install -g json-server
-json-server --watch src/db/data.json --port 3001
-Index:
-http://localhost:3001/
-Static files:
-Serving ./public directory if it exists
-Endpoints:
-http://localhost:3001/days
-![image](https://github.com/user-attachments/assets/0bb587a8-516f-4145-8b2f-38e59db20c04)
-http://localhost:3001/words
-![image](https://github.com/user-attachments/assets/d5a2c4dc-b0f8-4eb1-85c4-eae5f49767c4)
+<hr>
 
-### `npm test`
+<h2>⚡ Getting Started</h2>
+<h3>1️⃣ Clone the Repository</h3>
+<pre><code>git clone https://github.com/kbyunghak/React_VocaBoost.git
+cd React_VocaBoost</code></pre>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3>2️⃣ Install Dependencies</h3>
+<pre><code>npm install</code></pre>
 
-### `npm run build`
+<h3>3️⃣ Start the Development Server</h3>
+<pre><code>npm start</code></pre>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p>Open <a href="http://localhost:3000">http://localhost:3000</a> in your browser.</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<hr>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h2>🚀 Backend Setup (MongoDB + Render)</h2>
+<h3>1️⃣ Clone the Backend Repository</h3>
+<pre><code>git clone https://github.com/kbyunghak/voca-backend.git
+cd voca-backend</code></pre>
 
-### `npm run eject`
+<h3>2️⃣ Install Dependencies</h3>
+<pre><code>npm install</code></pre>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h3>3️⃣ Create a `.env` File</h3>
+<pre><code>touch .env</code></pre>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p><b>Inside `.env`:</b></p>
+<pre><code>MONGODB_URI=mongodb+srv://your_username:your_password@your_cluster.mongodb.net/Develop?retryWrites=true&w=majority
+PORT=8080</code></pre>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<h3>4️⃣ Start the Backend Server</h3>
+<pre><code>node server.js</code></pre>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<hr>
 
-## Learn More
+<h2>📡 API Endpoints</h2>
+<p>The backend provides RESTful API endpoints for managing vocabulary.</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h3>📌 GET All Days</h3>
+<pre><code>GET /api/days</code></pre>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h3>📌 GET Words for a Day</h3>
+<pre><code>GET /api/words?day=1</code></pre>
 
-### Code Splitting
+<h3>📌 ADD a New Word</h3>
+<pre><code>POST /api/words</code></pre>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<h3>📌 DELETE a Word</h3>
+<pre><code>DELETE /api/words/{word_id}</code></pre>
 
-### Analyzing the Bundle Size
+<hr>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<h2>🛠 Deployment</h2>
 
-### Making a Progressive Web App
+<h3>Frontend Deployment (GitHub Pages)</h3>
+<pre><code>npm run build
+npm run deploy</code></pre>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<h3>Backend Deployment (Render)</h3>
+<pre><code>git add .
+git commit -m "Deploy to Render"
+git push origin main</code></pre>
 
-### Advanced Configuration
+<ul>
+    <li>Go to <a href="https://render.com/">Render</a> and create a new Web Service.</li>
+    <li>Connect GitHub repo and add <b>MONGODB_URI</b> as an environment variable.</li>
+    <li>Deploy & get API URL.</li>
+</ul>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<hr>
 
-### Deployment
+<h2>🔗 Links</h2>
+<ul>
+    <li><b>Frontend (GitHub Pages):</b> <a href="https://kbyunghak.github.io/React_VocaBoost/">VocaBoost App</a></li>
+    <li><b>Backend (Render API):</b> <a href="https://voca-backend-i7hh.onrender.com/api/days">VocaBoost API</a></li>
+    <li><b>GitHub Repositories:</b></li>
+    <ul>
+        <li><a href="https://github.com/kbyunghak/React_VocaBoost">Frontend Repo</a></li>
+        <li><a href="https://github.com/kbyunghak/voca-backend">Backend Repo</a></li>
+    </ul>
+</ul>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<hr>
 
-### `npm run build` fails to minify
+<h2>📜 License</h2>
+<p>This project is open-source and available under the <b>MIT License</b>.</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<hr>
+
+<h2>🎉 Enjoy Learning Vocabulary with VocaBoost! 🚀</h2>
+
+</body>
+</html>
