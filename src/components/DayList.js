@@ -4,7 +4,7 @@ import useFetch from "../hooks/useFetch.js";
 export default function DayList() {
     //const [days, setDays] = useState([]);
     const days = useFetch("http://localhost:3001/days");
-    
+
     return (
         <>
             <ul className="list_day">

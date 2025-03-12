@@ -14,7 +14,8 @@ export default function App() {
                 <div className='App'>
                     <Header />
                     <Routes>
-                        <Route path="/" element={<DayList />} />
+                        <Route path="/" element={<Navigate to="/React_VocaBoost" replace />} />
+                        <Route path="/React_VocaBoost" element={<DayList />} />
                         <Route path="/day/:day" element={<Day />} />
                         <Route path="*" element={<EmptyPage />} />
                         <Route path="/create_words" element={<CreateWords />} />

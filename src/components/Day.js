@@ -8,7 +8,7 @@ export default function Day() {
     const maxDay = useFetch("http://localhost:3001/days").length;
     const words = useFetch('http://localhost:3001/words?day=' + day);    
     const existDay = useFetch('http://localhost:3001/days?day=' + day);    
-
+    
     if (existDay.length == 0) {
         return (<EmptyPage />)        
     } else {
@@ -25,27 +25,35 @@ export default function Day() {
                     <h2 className="btn_del">
                         {words.length === 0 ? `There are no words for Day ${day}` : ""}
                     </h2>               
-                </div>
-                
-                <table> 
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Day</th>
-                            <th>Word</th>
-                            <th>Meaning</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>               
-                    <tbody>
-                    {
-                        words.map(word => (
-                            <Word word={word} key={word.id} />
-                        ))
-                    }
-                    </tbody>                                
-                </table>
+                </div>            
+                {words.length > 0 ? (
+                      <table> 
+                      <thead>
+                          <tr>
+                              <th></th>
+                              <th>Day</th>
+                              <th>Word</th>
+                              <th>Meaning</th>
+                              <th></th>
+                              <th></th>
+                          </tr>
+                      </thead>               
+                      <tbody>
+                      {                        
+                          words.map(word => (
+                              <Word word={word} key={word.id} />
+                          ))
+                      }
+                      </tbody>                                
+                  </table>
+                    ) : (
+                    <tr>
+                        <td colSpan="5" style={{ textAlign: "center", padding: "10px" }}>
+                        No words available.
+                        </td>
+                    </tr>
+                    )}
+              
             </div>
         );    
     }        

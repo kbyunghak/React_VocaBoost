@@ -7,7 +7,7 @@ export default function CreateDays() {
     function onSubmit(event) {
         event.preventDefault();
 
-        fetch('http://localhost:3001/days/', {
+        fetch('http://localhost:8080/api/days/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -18,7 +18,8 @@ export default function CreateDays() {
         }).then(res => {
             if (res.ok) {
                 alert('Day has been created successfully.');     
-                navigate(`/`);
+                //navigate(`/`);   
+                navigate(`/day/${day.length + 1}`);     
             } else {
                 alert('Failed to create day.');
             }            

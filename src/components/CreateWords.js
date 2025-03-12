@@ -13,12 +13,13 @@ export default function CreateWord() {
         if (!isLoading) {
             setIsLoading(true);
 
-            fetch('http://localhost:3001/words/', {
+            fetch('http://localhost:8080/api/words/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
+                    id: Date.now().toString(),
                     day: dayRef.current.value,
                     word: wordRef.current.value,
                     meaning: meanRef.current.value,

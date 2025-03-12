@@ -23,13 +23,6 @@
   ],
   "words": [
     {
-      "id": "1",
-      "day": 1,
-      "word": "word1",
-      "meaning": "meaning1",
-      "isDone": true
-    },
-    {
       "id": "5",
       "day": 2,
       "word": "word5",
@@ -69,21 +62,21 @@
       "day": "1",
       "word": "word1",
       "meaning": "meaning2",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "6d70",
       "day": "1",
       "word": "test",
       "meaning": "testM",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "419b",
       "day": "1",
       "word": "a",
       "meaning": "a",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "66e1",
