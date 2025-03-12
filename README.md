@@ -10,9 +10,24 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
+Open [https://kbyunghak.github.io/React_VocaBoost/] to view it in your browser.
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![image](https://github.com/user-attachments/assets/7e12481b-0851-41a6-88cc-a25d80950d42)
+![image](https://github.com/user-attachments/assets/753469b5-8b05-4003-a1ed-634b044fd334)
+
+### `start json-server`
+
+npm install -g json-server
+json-server --watch src/db/data.json --port 3001
+Index:
+http://localhost:3001/
+Static files:
+Serving ./public directory if it exists
+Endpoints:
+http://localhost:3001/days
+![image](https://github.com/user-attachments/assets/0bb587a8-516f-4145-8b2f-38e59db20c04)
+http://localhost:3001/words
+![image](https://github.com/user-attachments/assets/d5a2c4dc-b0f8-4eb1-85c4-eae5f49767c4)
 
 ### `npm test`
 
