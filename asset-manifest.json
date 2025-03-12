@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/React_VocaBoost/static/css/main.f4ff7fb3.css",
-    "main.js": "/React_VocaBoost/static/js/main.c0031774.js",
+    "main.js": "/React_VocaBoost/static/js/main.fe493d47.js",
     "static/js/488.acfe49a1.chunk.js": "/React_VocaBoost/static/js/488.acfe49a1.chunk.js",
     "static/media/logo.svg": "/React_VocaBoost/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/React_VocaBoost/index.html",
     "main.f4ff7fb3.css.map": "/React_VocaBoost/static/css/main.f4ff7fb3.css.map",
-    "main.c0031774.js.map": "/React_VocaBoost/static/js/main.c0031774.js.map",
+    "main.fe493d47.js.map": "/React_VocaBoost/static/js/main.fe493d47.js.map",
     "488.acfe49a1.chunk.js.map": "/React_VocaBoost/static/js/488.acfe49a1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f4ff7fb3.css",
-    "static/js/main.c0031774.js"
+    "static/js/main.fe493d47.js"
   ]
 }
