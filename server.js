@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 // MongoDB Atlas
-mongoose.connect('mongodb+srv://andrewKim:mongo0524@devcluster.7gque.mongodb.net/Develop')
+mongoose.connect(process.env.REACT_APP_MONOGO)
   .then(() => { console.log("MongoDB Connected...");   console.log(`Server is running at http://localhost:${port}`);})
   .catch(err => console.error("MongoDB Connection Error: ", err));
 
@@ -109,7 +109,7 @@ app.post("/api/days", async (req, res) => {
     if (result.modifiedCount > 0) {
         res.json({ message: "Day added successfully", day: req.body });
     } else {
-        res.status(500).json({ error: "Failed to add day" });
+        res.status(500).json({ error: "Failed to add word" });
     }
   } catch (error) {
     console.error("❌ Failed to create day:", error);    

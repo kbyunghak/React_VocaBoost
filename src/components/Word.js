@@ -11,7 +11,7 @@ export default function Word({ word : w }) {
 
     function toggleDone() {
         //setIsDone(!isDone);
-        fetch(`http://localhost:3001/words/${word.id}`, {
+        fetch(process.env.REACT_APP_API_URL + `/words/${word.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,14 +30,18 @@ export default function Word({ word : w }) {
 
     function del() {
         if (window.confirm('Are you sure?')) {
-            fetch(`http://localhost:3001/words/${word.id}`, {
+            fetch(process.env.REACT_APP_API_URL + `/words/${word.id}`, {
                 method: 'DELETE',
             })
             .then(res => {
                 if (res.ok) {
                     setWord({ id: 0 });
                 }
-            });
+            })  
+            .catch(error => {
+                console.error("Delete error:", error);
+                alert("Error deleting word.");
+            });;
         } else {
             alert('Cancelled');
         }   

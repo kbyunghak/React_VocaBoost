@@ -5,9 +5,9 @@ import useFetch from "../hooks/useFetch.js";
 
 export default function Day() {    
     const { day } = useParams();    
-    const maxDay = useFetch("http://localhost:3001/days").length;
-    const words = useFetch('http://localhost:3001/words?day=' + day);    
-    const existDay = useFetch('http://localhost:3001/days?day=' + day);    
+    const maxDay = useFetch(process.env.REACT_APP_API_URL + '/days').length;
+    const words = useFetch(process.env.REACT_APP_API_URL + `/words?day=${day}`);    
+    const existDay = useFetch(process.env.REACT_APP_API_URL + `/days?day=${day}`);    
     
     if (existDay.length == 0) {
         return (<EmptyPage />)        

@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function CreateWord() {
-    const days = useFetch("http://localhost:3001/days");
+    const days = useFetch(process.env.REACT_APP_API_URL + '/days');
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(false);
 
@@ -13,7 +13,7 @@ export default function CreateWord() {
         if (!isLoading) {
             setIsLoading(true);
 
-            fetch('http://localhost:8080/api/words/', {
+            fetch(process.env.REACT_APP_API_URL + '/words/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

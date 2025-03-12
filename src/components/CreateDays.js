@@ -2,12 +2,12 @@ import useFetch from '../hooks/useFetch';
 import { useNavigate } from 'react-router-dom';
 
 export default function CreateDays() {
-    const day = useFetch("http://localhost:3001/days");    
+    const day = useFetch(process.env.REACT_APP_API_URL + '/days');    
     const navigate = useNavigate();
     function onSubmit(event) {
         event.preventDefault();
 
-        fetch('http://localhost:8080/api/days/', {
+        fetch(process.env.Rander_URI + '/days', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

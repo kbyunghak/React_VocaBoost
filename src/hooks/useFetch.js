@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 
-const API_URL = "https://react-vocaboost.onrender.com/";
-
 
 export default function useFetch(url) {
+    console.log("API URL:", process.env.REACT_APP_API_URL);
     const [data, setData] = useState([]);
-    
-    url = url.replace("http://localhost:3001", "https://react-vocaboost.onrender.com/api");
     console.log(url);
     useEffect(() => {
         fetch(url)
