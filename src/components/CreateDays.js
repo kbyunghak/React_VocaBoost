@@ -7,7 +7,7 @@ export default function CreateDays() {
     function onSubmit(event) {
         event.preventDefault();
 
-        fetch(process.env.Rander_URI + '/days', {
+        fetch(process.env.REACT_APP_API_URL + '/days/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
